@@ -26,3 +26,12 @@
 .map-slider{position:absolute;inset:0;width:100%;height:100%;margin:0;z-index:4;opacity:0;cursor:ew-resize}
 .proof-caption{text-align:center;font-size:11px;color:#7a8090;margin:14px 0 0}
 @media(max-width:700px){.proof-section{padding:54px 5%}.proof-heading{margin-bottom:38px}.proof-case-heading{align-items:flex-start;flex-direction:column}.proof-labels span{padding:9px 12px}.map-comparison{aspect-ratio:1.1;border-radius:12px}.map-divider span{width:36px;height:36px}}
+
+/* Keep the proof section aligned with the portfolio's dark hero palette */
+.proof-section{background:var(--bg);color:var(--text)}
+.proof-heading h2,.proof-heading h2 em,.proof-case-heading h3{color:var(--text)}
+.proof-heading>p:last-child,.proof-case-heading p,.proof-caption{color:var(--muted)}
+.proof-labels span{background:var(--panel);border-color:var(--line)}
+.proof-case-heading .before-label{color:#ff777b}
+.proof-case-heading .after-label{color:var(--lime)}
+.map-comparison{border-color:var(--line);box-shadow:0 18px 36px #0003}
