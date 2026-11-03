@@ -56,3 +56,8 @@
 .portrait-card figcaption span{color:var(--muted)}
 .about-footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:15px;margin-top:20px;color:#9ca5a8;font-size:9px;letter-spacing:.12em}
 @media(max-width:760px){.about-intro{grid-template-columns:1fr;gap:8px}.about-bio{padding-top:8px}.about-portraits{min-height:390px;gap:7%}.portrait-card-left{width:48%;margin-top:12px}.portrait-card-right{width:37%;margin-top:32px}.portrait-card img{height:auto}.about-footer{font-size:8px;letter-spacing:.05em}}
+
+/* Slightly larger navigation and a round, more prominent brand mark */
+.brand img{width:48px;height:48px;max-width:none;object-fit:cover;border-radius:50%;overflow:hidden}
+.nav-links{font-size:14px}
+@media(max-width:760px){.brand img{width:46px;height:46px}.nav-links{font-size:14px}}
