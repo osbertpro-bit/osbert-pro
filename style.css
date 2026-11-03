@@ -47,12 +47,12 @@
 .about-bio p{margin:0 0 15px}
 .about-portraits{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;gap:13%;margin:12px auto 0;max-width:1050px}
 .about-orbit{position:absolute;width:min(44vw,480px);aspect-ratio:1;border-radius:50%;background:#8cf12f30;left:50%;top:50%;transform:translate(-50%,-50%)}
-.portrait-card{position:relative;z-index:1;margin:0;background:#171d22;border:1px solid #ffffff14;padding:9px 9px 0;box-shadow:0 20px 45px #0004}
+.portrait-card{position:relative;z-index:1;margin:0;background:transparent;border:0;padding:0;box-shadow:none}
 .portrait-card-left{width:37%;transform:rotate(-2deg);margin-top:45px}
 .portrait-card-right{width:27%;transform:rotate(2deg);margin-top:90px}
 .portrait-card img{display:block;width:100%;height:360px;object-fit:cover}
 .portrait-card-right img{height:310px}
-.portrait-card figcaption{font-size:8px;letter-spacing:.08em;color:#d5d9d8;padding:12px 4px 13px}
+.portrait-card figcaption{display:none}
 .portrait-card figcaption span{color:var(--muted)}
 .about-footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:15px;margin-top:20px;color:#9ca5a8;font-size:9px;letter-spacing:.12em}
 @media(max-width:760px){.about-intro{grid-template-columns:1fr;gap:8px}.about-bio{padding-top:8px}.about-portraits{min-height:390px;gap:7%}.portrait-card-left{width:48%;margin-top:20px}.portrait-card-right{width:35%;margin-top:55px}.portrait-card img{height:270px}.portrait-card-right img{height:225px}.about-footer{font-size:8px;letter-spacing:.05em}}
