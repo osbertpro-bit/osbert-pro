@@ -139,3 +139,7 @@
 .platform-card p{color:var(--muted);line-height:1.65;margin:0 0 1.2rem}
 .platform-action{margin-top:auto;color:var(--lime);font-weight:600}
 @media(max-width:760px){.platform-grid{grid-template-columns:1fr}.platform-card{min-height:0}}
+
+/* Tighten the transition from section 5 (client work) into section 6 (how to work together). */
+.client-work{padding-bottom:56px}
+.contact-platforms{padding-top:48px}
