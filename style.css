@@ -67,3 +67,19 @@
 /* Slightly larger navigation logo */
 .brand img{width:54px;height:54px;max-width:none;object-fit:cover;border-radius:50%;overflow:hidden}
 @media(max-width:768px){.brand img{width:52px;height:52px}}
+
+/* About section refinements based on the supplied reference layout */
+.about-editorial{padding-top:48px;padding-bottom:28px;overflow:hidden}
+.about-intro{grid-template-columns:1.35fr .65fr;gap:7%;align-items:start}
+.about-title h2{font-size:clamp(46px,7.2vw,92px);line-height:.98;max-width:760px}
+.about-title h2 em{display:inline;color:var(--lime);font-style:italic}
+.about-bio{padding-top:30px;font-size:clamp(14px,1.25vw,17px);line-height:1.65}
+.about-portraits{min-height:470px;margin-top:4px;gap:13%}
+.about-orbit{background:var(--lime);opacity:.78;width:min(42vw,450px)}
+.portrait-card-left{width:35%;margin-top:20px}
+.portrait-card-right{width:29%;margin-top:56px}
+.portrait-card img{aspect-ratio:4/5;object-fit:cover}
+.portrait-card figcaption{display:block;margin-top:10px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text)}
+.portrait-card figcaption span{color:var(--muted)}
+.about-footer{margin-top:12px;padding-top:18px;font-size:10px;letter-spacing:.1em}
+@media(max-width:760px){.about-editorial{padding-top:42px}.about-intro{grid-template-columns:1fr;gap:6px}.about-title h2{font-size:clamp(43px,11vw,64px);max-width:100%}.about-bio{padding-top:12px;font-size:14px}.about-portraits{min-height:330px;gap:7%;margin-top:10px}.portrait-card-left{width:49%;margin-top:8px}.portrait-card-right{width:38%;margin-top:30px}.portrait-card figcaption{font-size:8px;line-height:1.5}.about-footer{flex-wrap:wrap;row-gap:8px;font-size:8px}}
