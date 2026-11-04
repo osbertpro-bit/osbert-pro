@@ -96,3 +96,17 @@
 
 /* Selected business experience service tabs and cards */
 .client-service-tabs{display:flex;flex-wrap:wrap;gap:.65rem;margin:2rem 0 1.5rem}.client-service-tab{border:1px solid var(--line,#d9dfe7);border-radius:999px;padding:.7rem 1.15rem;background:transparent;color:inherit;font:inherit;cursor:pointer;transition:background .2s,color .2s,border-color .2s}.client-service-tab.is-active{background:var(--ink,#17243a);color:#fff;border-color:var(--ink,#17243a)}.client-service-group[hidden]{display:none}.client-business-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.client-business{padding:1.35rem;border:1px solid var(--line,#e1e5eb);border-radius:1rem;background:var(--card,#fff);box-shadow:0 8px 28px rgba(18,35,58,.045)}.client-card-icon{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.8rem;background:#edf4f2;color:#1d7666;font-size:1.45rem;margin-bottom:1rem}.client-business h3{margin:0 0 .35rem}.client-business p{margin:0 0 .8rem;color:var(--muted,#697586)}.client-business span{display:block;line-height:1.55;font-size:.93rem}@media(max-width:640px){.client-business-grid{grid-template-columns:1fr}.client-service-tabs{gap:.45rem}.client-service-tab{padding:.6rem .9rem;font-size:.9rem}}
+
+
+/* Section 5: restore the portfolio's dark navy and blue theme */
+.client-work{background:#0b1119;color:#eef4ff}
+.client-work .client-work-heading>p:last-child{color:#a8b8cf}
+.client-work .client-service-tab{background:#0b1119;color:#e5edf9;border-color:#34445a}
+.client-work .client-service-tab:hover{border-color:#4b8dff;color:#fff}
+.client-work .client-service-tab.is-active{background:#172943;color:#fff;border-color:#172943}
+.client-work .client-business{background:linear-gradient(145deg,#14243a 0%,#0e1929 100%);border:1px solid #263e5e;color:#eef4ff;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.client-work .client-business h3{color:#f5f8ff}
+.client-work .client-business p{color:#a9bad1}
+.client-work .client-business span{color:#a9c9ff}
+.client-work .client-card-icon{background:#1a3552;color:#78b5ff}
+@media(max-width:640px){.client-work .client-business{padding:1.2rem}}
