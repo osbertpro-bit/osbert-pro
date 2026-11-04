@@ -110,3 +110,14 @@
 .client-work .client-business span{color:#a9c9ff}
 .client-work .client-card-icon{background:#1a3552;color:#78b5ff}
 @media(max-width:640px){.client-work .client-business{padding:1.2rem}}
+
+
+/* Section 5 cards and accents match the service cards in Section 2 */
+.client-work .client-service-tab.is-active{background:var(--lime);color:#11170d;border-color:var(--lime)}
+.client-work .client-service-tab:hover{border-color:var(--lime);color:var(--lime)}
+.client-work .client-service-tab.is-active:hover{color:#11170d}
+.client-work .client-business{background:linear-gradient(145deg,#1b2228,#151a1f);border:1px solid #2d363d;box-shadow:none}
+.client-work .client-business h3{color:var(--text)}
+.client-work .client-business p{color:var(--muted)}
+.client-work .client-business span{color:var(--lime)}
+.client-work .client-card-icon{background:#202c22;color:var(--lime)}
