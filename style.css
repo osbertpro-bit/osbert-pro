@@ -121,3 +121,6 @@
 .client-work .client-business p{color:var(--muted)}
 .client-work .client-business span{color:var(--lime)}
 .client-work .client-card-icon{background:#202c22;color:var(--lime)}
+
+/* Section 5 business cards are direct links */
+.client-work a.client-business{display:block;text-decoration:none;color:inherit;cursor:pointer}
