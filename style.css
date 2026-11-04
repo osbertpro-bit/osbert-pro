@@ -83,3 +83,9 @@
 .portrait-card figcaption span{color:var(--muted)}
 .about-footer{margin-top:12px;padding-top:18px;font-size:10px;letter-spacing:.1em}
 @media(max-width:760px){.about-editorial{padding-top:42px}.about-intro{grid-template-columns:1fr;gap:6px}.about-title h2{font-size:clamp(43px,11vw,64px);max-width:100%}.about-bio{padding-top:12px;font-size:14px}.about-portraits{min-height:330px;gap:7%;margin-top:10px}.portrait-card-left{width:49%;margin-top:8px}.portrait-card-right{width:38%;margin-top:30px}.portrait-card figcaption{font-size:8px;line-height:1.5}.about-footer{flex-wrap:wrap;row-gap:8px;font-size:8px}}
+
+/* Slightly smaller portraits in About section */
+.about-portraits{min-height:420px;gap:15%}
+.portrait-card-left{width:31%}
+.portrait-card-right{width:26%}
+@media(max-width:760px){.about-portraits{min-height:300px;gap:9%}.portrait-card-left{width:44%}.portrait-card-right{width:34%}}
