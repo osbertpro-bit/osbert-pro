@@ -124,3 +124,18 @@
 
 /* Section 5 business cards are direct links */
 .client-work a.client-business{display:block;text-decoration:none;color:inherit;cursor:pointer}
+
+
+/* Section 6: ways to work together */
+.contact-platforms{background:var(--bg);color:var(--text)}
+.platforms-heading{max-width:680px;margin-bottom:2rem}
+.platforms-heading>p:last-child{color:var(--muted);max-width:560px}
+.platform-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.platform-card{display:flex;flex-direction:column;min-height:260px;padding:1.4rem;border:1px solid #46525b;border-radius:1rem;background:linear-gradient(145deg,#1b2228,#151a1f);color:var(--text);text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.platform-card:hover{transform:translateY(-3px);border-color:var(--lime)}
+.platform-brand{display:flex;align-items:center;gap:.65rem;margin-bottom:1.5rem;font-weight:600}
+.platform-brand img{width:38px;height:38px;object-fit:cover;border-radius:50%;border:1px solid #46525b}
+.platform-card h3{margin:0 0 .5rem}
+.platform-card p{color:var(--muted);line-height:1.65;margin:0 0 1.2rem}
+.platform-action{margin-top:auto;color:var(--lime);font-weight:600}
+@media(max-width:760px){.platform-grid{grid-template-columns:1fr}.platform-card{min-height:0}}
