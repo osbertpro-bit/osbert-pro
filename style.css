@@ -116,7 +116,7 @@
 .client-work .client-service-tab.is-active{background:var(--lime);color:#11170d;border-color:var(--lime)}
 .client-work .client-service-tab:hover{border-color:var(--lime);color:var(--lime)}
 .client-work .client-service-tab.is-active:hover{color:#11170d}
-.client-work .client-business{background:linear-gradient(145deg,#1b2228,#151a1f);border:1px solid #2d363d;box-shadow:none}
+.client-work .client-business{background:linear-gradient(145deg,#1b2228,#151a1f);border:1px solid #46525b;box-shadow:none;transition:border-color .2s ease,transform .2s ease}.client-work .client-business:hover{border-color:var(--lime);transform:translateY(-3px)}
 .client-work .client-business h3{color:var(--text)}
 .client-work .client-business p{color:var(--muted)}
 .client-work .client-business span{color:var(--lime)}
