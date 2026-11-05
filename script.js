@@ -1,32 +1,46 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav-links');
 
-menuButton.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-});
+if (menuButton && nav) {
+  const setMenuOpen = (isOpen) => {
+    nav.classList.toggle('open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  };
 
-nav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.addEventListener('click', () => {
+    setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
   });
-});
 
-document.querySelector('#year').textContent = new Date().getFullYear();
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      menuButton.focus();
+    }
+  });
+}
+
+const yearElement = document.querySelector('#year');
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 const comparison = document.querySelector('.map-comparison');
 if (comparison) {
   const slider = comparison.querySelector('.map-slider');
-  const beforeWrap = comparison.querySelector('.map-before-wrap');
+  const slider = comparison.querySelector('.map-slider');
   const beforeImage = comparison.querySelector('.map-before');
-  const syncComparison = () => {
-    beforeImage.style.width = `${comparison.clientWidth}px`;
-    comparison.style.setProperty('--split', `${slider.value}%`);
-  };
-  slider.addEventListener('input', syncComparison);
-  window.addEventListener('resize', syncComparison);
-  syncComparison();
+  if (slider && beforeImage) {
+    const syncComparison = () => {
+      beforeImage.style.width = `${comparison.clientWidth}px`;
+      comparison.style.setProperty('--split', `${slider.value}%`);
+    };
+    slider.addEventListener('input', syncComparison);
+    window.addEventListener('resize', syncComparison, { passive: true });
+    syncComparison();
+  }
 }
 
 
@@ -58,8 +72,8 @@ if (testimonialSection) {
   };
 
   pageButtons.forEach((button, index) => button.addEventListener('click', () => showTestimonialPage(index)));
-  previousButton.addEventListener('click', () => showTestimonialPage(currentPage - 1));
-  nextButton.addEventListener('click', () => showTestimonialPage(currentPage + 1));
+  if (previousButton) previousButton.addEventListener('click', () => showTestimonialPage(currentPage - 1));
+  if (nextButton) nextButton.addEventListener('click', () => showTestimonialPage(currentPage + 1));
   showTestimonialPage(0);
 }
 
@@ -94,7 +108,7 @@ if (contactSection) {
   };
 
   contactDots.forEach((dot, index) => dot.addEventListener('click', () => showContactPage(index)));
-  contactPrev.addEventListener('click', () => showContactPage(contactPage - 1));
-  contactNext.addEventListener('click', () => showContactPage(contactPage + 1));
+  if (contactPrev) contactPrev.addEventListener('click', () => showContactPage(contactPage - 1));
+  if (contactNext) contactNext.addEventListener('click', () => showContactPage(contactPage + 1));
   showContactPage(0);
 }
