@@ -177,3 +177,20 @@
 .testimonial-arrows button:hover{background:var(--lime);border-color:var(--lime);color:#11170d}
 @keyframes testimonialIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:700px){.testimonials{padding-top:54px;padding-bottom:58px}.testimonials-topline{display:block;margin-bottom:28px}.testimonials-intro{margin-top:18px}.testimonial-carousel{padding:22px 18px}.testimonial-progress{gap:4px;margin-bottom:30px}.testimonial-stage{min-height:390px}.testimonial-slide blockquote{font-size:19px;line-height:1.55}.testimonial-controls{gap:13px;margin-top:26px;padding-top:18px}.testimonial-pagination{gap:6px}.testimonial-pagination button{width:6px;height:6px}.testimonial-pagination button.is-active{width:17px}.testimonial-arrows button{width:34px;height:34px}}
+
+
+/* Section 7 reviews: compact three-column card grid */
+.testimonials{padding-top:62px;padding-bottom:68px}
+.testimonials-topline{margin-bottom:30px}
+.testimonials-topline h2{font-size:clamp(38px,5vw,62px)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1200px;margin:0 auto}
+.testimonial-card{display:flex;flex-direction:column;min-width:0;padding:22px;border:1px solid #39464d;border-radius:14px;background:linear-gradient(145deg,#1b2228,#151a1f);box-shadow:0 10px 25px #0002}
+.testimonial-card[hidden]{display:none}
+.testimonial-card .testimonial-service{font-size:8px;line-height:1.5;letter-spacing:.12em;margin:0 0 14px;min-height:25px}
+.testimonial-card blockquote{font:400 14px/1.65 'DM Sans',sans-serif;letter-spacing:0;color:#d8dedf;margin:0;flex:1}
+.testimonial-card .testimonial-author{margin-top:22px;padding-top:15px;border-top:1px solid #303a40}
+.testimonial-card .testimonial-mark{width:34px;height:34px;font-size:14px}
+.testimonial-card .testimonial-author strong{font-size:11px}
+.testimonial-card .testimonial-author small{font-size:9px}
+@media(max-width:900px){.testimonial-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.testimonial-card{padding:19px}}
+@media(max-width:600px){.testimonials{padding-top:48px;padding-bottom:54px}.testimonial-grid{grid-template-columns:1fr;gap:12px}.testimonial-card{padding:20px}.testimonial-card blockquote{font-size:14px}}
