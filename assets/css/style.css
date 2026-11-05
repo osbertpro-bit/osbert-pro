@@ -416,3 +416,21 @@
 :where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--lime);outline-offset:4px}
 .menu-toggle{cursor:pointer}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* FAQ section placed after testimonials */
+.faq-section{max-width:100%;padding:64px 24px 72px;border-top:1px solid var(--line)}
+.faq-heading,.faq-list{width:100%;max-width:900px;margin-left:auto;margin-right:auto}
+.faq-heading{margin-bottom:28px}
+.faq-heading h2{font:500 clamp(42px,5.5vw,68px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.055em;margin:12px 0;color:var(--text)}
+.faq-heading h2 em{font-style:italic;color:var(--lime)}
+.faq-intro{font-size:13px;line-height:1.7;color:var(--muted);max-width:520px;margin:14px 0 0}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{display:grid;grid-template-columns:38px 1fr 24px;align-items:center;gap:14px;padding:20px 2px;cursor:pointer;list-style:none;color:var(--text);font-size:15px;font-weight:600}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-index{font-size:10px;letter-spacing:.1em;color:var(--lime);font-weight:600}
+.faq-toggle{display:grid;place-items:center;width:24px;height:24px;border:1px solid var(--line);border-radius:50%;color:var(--lime);font-size:17px;font-weight:400;transition:transform .2s ease}
+.faq-item[open] .faq-toggle{transform:rotate(45deg)}
+.faq-item>p{margin:0 42px 22px 54px;max-width:720px;color:var(--muted);font-size:13px;line-height:1.8}
+@media(max-width:600px){.faq-section{padding:48px 20px 54px}.faq-item summary{grid-template-columns:27px 1fr 24px;gap:10px;padding:17px 0;font-size:13px}.faq-item>p{margin:0 34px 19px 37px;font-size:12px}}
