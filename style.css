@@ -388,3 +388,25 @@
 /* Use the existing portfolio logo in the hero identity badge */
 .portrait-caption .caption-mark{display:flex;align-items:center;justify-content:center;width:28px;height:28px;flex:0 0 28px;font-size:0;color:transparent}
 .portrait-caption .caption-mark img{display:block;width:100%;height:100%;object-fit:contain}
+
+
+/* Footer — adapted to the portfolio's dark and lime visual identity */
+.portfolio-footer{border-top:1px solid var(--line);background:#111619;color:var(--text);padding:62px 5.5% 22px}
+.footer-upper{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.35fr .8fr .8fr .9fr;gap:clamp(28px,5vw,72px);padding-bottom:54px}
+.footer-brand-block{max-width:290px}
+.footer-logo-link{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;margin-bottom:18px}
+.footer-logo{display:block;width:100%;height:100%;object-fit:contain}
+.footer-brand-block>p{font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 20px}
+.footer-email-link{display:inline-flex;align-items:center;gap:10px;color:var(--text);font-size:12px;text-decoration:none;overflow-wrap:anywhere}
+.footer-email-link span,.footer-nav-group a span{color:var(--lime)}
+.footer-nav-group{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.footer-nav-group h3{font-size:9px;letter-spacing:.15em;color:var(--muted);font-weight:700;margin:4px 0 9px}
+.footer-nav-group>a{display:inline-flex;align-items:center;gap:7px;color:#d5dcda;text-decoration:none;font-size:12px;transition:color .2s ease}
+.footer-nav-group>a:hover,.footer-email-link:hover{color:var(--lime)}
+.footer-contact-group>p{font-size:11px;line-height:1.7;color:var(--muted);max-width:220px;margin:8px 0 0}
+.footer-bottom{max-width:1240px;margin:0 auto;border-top:1px solid var(--line);padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.footer-bottom span,.footer-bottom a{font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.footer-bottom a{text-decoration:none}
+.footer-bottom a:hover{color:var(--lime)}
+@media(max-width:850px){.footer-upper{grid-template-columns:1.2fr 1fr 1fr;gap:36px}.footer-contact-group{grid-column:2 / 4}}
+@media(max-width:560px){.portfolio-footer{padding:46px 5% 20px}.footer-upper{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 22px;padding-bottom:38px}.footer-brand-block{grid-column:1 / -1;max-width:340px}.footer-contact-group{grid-column:auto}.footer-bottom{align-items:flex-start;flex-wrap:wrap}.footer-bottom span:nth-child(2){display:none}}
