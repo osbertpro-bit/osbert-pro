@@ -30,7 +30,6 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
 const comparison = document.querySelector('.map-comparison');
 if (comparison) {
   const slider = comparison.querySelector('.map-slider');
-  const slider = comparison.querySelector('.map-slider');
   const beforeImage = comparison.querySelector('.map-before');
   if (slider && beforeImage) {
     const syncComparison = () => {
