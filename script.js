@@ -28,3 +28,32 @@ if (comparison) {
   window.addEventListener('resize', syncComparison);
   syncComparison();
 }
+
+
+// Section 7 testimonial carousel controls
+const testimonialCarousel = document.querySelector('.testimonial-carousel');
+if (testimonialCarousel) {
+  const slides = [...testimonialCarousel.querySelectorAll('.testimonial-slide')];
+  const dots = [...testimonialCarousel.querySelectorAll('.testimonial-pagination button')];
+  const progress = [...testimonialCarousel.querySelectorAll('.testimonial-progress span')];
+  const current = testimonialCarousel.querySelector('.testimonial-count strong');
+  let activeReview = 0;
+  const showReview = (index) => {
+    activeReview = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.hidden = i !== activeReview;
+      slide.classList.toggle('is-active', i === activeReview);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === activeReview);
+      if (i === activeReview) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
+    progress.forEach((segment, i) => segment.classList.toggle('is-active', i === activeReview));
+    current.textContent = String(activeReview + 1).padStart(2, '0');
+  };
+  testimonialCarousel.querySelector('.testimonial-prev').addEventListener('click', () => showReview(activeReview - 1));
+  testimonialCarousel.querySelector('.testimonial-next').addEventListener('click', () => showReview(activeReview + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => showReview(i)));
+  showReview(0);
+}
