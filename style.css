@@ -143,3 +143,37 @@
 /* Tighten the transition from section 5 (client work) into section 6 (how to work together). */
 .client-work{padding-bottom:56px}
 .contact-platforms{padding-top:48px}
+
+
+/* Section 7: client testimonial carousel */
+.testimonials{background:var(--bg);color:var(--text);padding-top:76px;padding-bottom:84px;border-top:1px solid var(--line)}
+.testimonials-topline{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:42px}
+.testimonials-topline h2{font:500 clamp(42px,6.5vw,78px)/.98 'Space Grotesk',sans-serif;letter-spacing:-.06em;margin:12px 0 0}
+.testimonials-topline h2 em{font-style:italic;color:var(--lime)}
+.testimonials-intro{max-width:330px;color:var(--muted);font-size:13px;line-height:1.7;margin:0 0 5px}
+.testimonial-carousel{max-width:1050px;margin:0 auto;border:1px solid #344047;border-radius:18px;background:linear-gradient(145deg,#1b2228,#12171b);padding:clamp(22px,4vw,48px);box-shadow:0 22px 55px #0002}
+.testimonial-progress{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;margin-bottom:42px}
+.testimonial-progress span{height:3px;border-radius:5px;background:#39434a;transition:background .25s ease}
+.testimonial-progress span.is-active{background:var(--lime)}
+.testimonial-stage{min-height:310px;display:flex;align-items:center}
+.testimonial-slide{width:100%;animation:testimonialIn .35s ease both}
+.testimonial-slide[hidden]{display:none}
+.testimonial-service{font-size:9px;letter-spacing:.16em;font-weight:700;color:var(--lime);margin:0 0 24px}
+.testimonial-slide blockquote{font:500 clamp(19px,2.7vw,31px)/1.5 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#f0f3f1;margin:0;max-width:900px}
+.testimonial-author{display:flex;align-items:center;gap:12px;margin-top:32px}
+.testimonial-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#29372a;border:1px solid #607c4b;color:var(--lime);font:600 17px 'Space Grotesk'}
+.testimonial-author strong,.testimonial-author small{display:block}
+.testimonial-author strong{font-size:12px;color:var(--text)}
+.testimonial-author small{font-size:10px;color:var(--muted);margin-top:4px}
+.testimonial-controls{display:flex;align-items:center;gap:24px;border-top:1px solid #303a40;margin-top:38px;padding-top:22px}
+.testimonial-count{font:500 13px 'Space Grotesk';white-space:nowrap}
+.testimonial-count strong{color:var(--lime);font-size:17px}
+.testimonial-count span{color:var(--muted)}
+.testimonial-pagination{display:flex;justify-content:center;gap:8px;flex:1}
+.testimonial-pagination button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#58636a;cursor:pointer;transition:all .2s ease}
+.testimonial-pagination button.is-active{width:23px;border-radius:8px;background:var(--lime)}
+.testimonial-arrows{display:flex;gap:8px}
+.testimonial-arrows button{width:38px;height:38px;border:1px solid #46525b;border-radius:50%;background:transparent;color:var(--text);font-size:17px;cursor:pointer;transition:all .2s ease}
+.testimonial-arrows button:hover{background:var(--lime);border-color:var(--lime);color:#11170d}
+@keyframes testimonialIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.testimonials{padding-top:54px;padding-bottom:58px}.testimonials-topline{display:block;margin-bottom:28px}.testimonials-intro{margin-top:18px}.testimonial-carousel{padding:22px 18px}.testimonial-progress{gap:4px;margin-bottom:30px}.testimonial-stage{min-height:390px}.testimonial-slide blockquote{font-size:19px;line-height:1.55}.testimonial-controls{gap:13px;margin-top:26px;padding-top:18px}.testimonial-pagination{gap:6px}.testimonial-pagination button{width:6px;height:6px}.testimonial-pagination button.is-active{width:17px}.testimonial-arrows button{width:34px;height:34px}}
