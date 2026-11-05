@@ -381,3 +381,6 @@
  .contact-links{grid-template-columns:1fr}
  .contact-links.is-last-page{grid-template-columns:1fr}
 }
+
+.contact-link[hidden]{display:none}
+.contact-carousel-arrows button:disabled{opacity:.35;cursor:not-allowed}
