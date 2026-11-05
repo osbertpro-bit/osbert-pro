@@ -434,3 +434,25 @@
 .faq-item[open] .faq-toggle{transform:rotate(45deg)}
 .faq-item>p{margin:0 42px 22px 54px;max-width:720px;color:var(--muted);font-size:13px;line-height:1.8}
 @media(max-width:600px){.faq-section{padding:48px 20px 54px}.faq-item summary{grid-template-columns:27px 1fr 24px;gap:10px;padding:17px 0;font-size:13px}.faq-item>p{margin:0 34px 19px 37px;font-size:12px}}
+
+
+/* FAQ reference styling: quiet editorial layout on a warm light surface */
+#faq.faq-section{background:#f2f0e9;color:#252722;border-top:0;padding:58px 24px 72px}
+#faq .faq-heading,#faq .faq-list{max-width:1080px}
+#faq .faq-heading{margin-bottom:26px}
+#faq .faq-heading .eyebrow{font-size:8px;letter-spacing:.1em;color:#85877e;margin:0 0 12px}
+#faq .faq-heading h2{font:500 clamp(44px,5.6vw,64px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.065em;margin:0;color:#252722}
+#faq .faq-heading h2 em{font-style:italic;color:#85877e}
+#faq .faq-intro{display:none}
+#faq .faq-list{border-top:1px solid #d1d0c9}
+#faq .faq-item{border-bottom:1px solid #d1d0c9}
+#faq .faq-item summary{grid-template-columns:30px 1fr 22px;gap:14px;padding:16px 0;font-size:12px;font-weight:400;color:#272923}
+#faq .faq-index{font-size:8px;letter-spacing:0;color:#89927b;font-weight:600}
+#faq .faq-toggle{width:20px;height:20px;border:1px solid #d1d0c9;color:#777d6d;font-size:14px}
+#faq .faq-item>p{margin:0 36px 17px 44px;max-width:760px;color:#686b63;font-size:12px;line-height:1.75}
+@media(max-width:600px){
+ #faq.faq-section{padding:44px 20px 52px}
+ #faq .faq-heading h2{font-size:clamp(39px,10vw,54px)}
+ #faq .faq-item summary{grid-template-columns:24px 1fr 22px;gap:10px;padding:15px 0;font-size:12px}
+ #faq .faq-item>p{margin:0 30px 16px 34px;font-size:11px}
+}
