@@ -111,3 +111,30 @@ if (contactSection) {
   if (contactNext) contactNext.addEventListener('click', () => showContactPage(contactPage + 1));
   showContactPage(0);
 }
+
+
+/* Persistent dark/light theme control. Dark mode is the first-visit default. */
+const themeToggle = document.querySelector('.theme-toggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+if (themeToggle) {
+  const root = document.documentElement;
+  const applyTheme = (theme, persist = false) => {
+    const isLight = theme === 'light';
+    if (isLight) root.setAttribute('data-theme', 'light');
+    else root.removeAttribute('data-theme');
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    themeToggle.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    const icon = themeToggle.querySelector('.theme-toggle-icon');
+    if (icon) icon.textContent = isLight ? '☾' : '☼';
+    if (themeMeta) themeMeta.setAttribute('content', isLight ? '#f5f7f4' : '#0d1114');
+    if (persist) {
+      try { localStorage.setItem('osbertpro-theme', isLight ? 'light' : 'dark'); } catch (error) {}
+    }
+  };
+
+  applyTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  themeToggle.addEventListener('click', () => {
+    applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light', true);
+  });
+}
