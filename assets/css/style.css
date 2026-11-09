@@ -416,3 +416,126 @@
 :where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--lime);outline-offset:4px}
 .menu-toggle{cursor:pointer}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Availability indicator and accessible theme switch */
+.availability-indicator{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.12em}
+.availability-dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px #8cf12f20}
+.theme-toggle{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--text);font-size:19px;line-height:1;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.theme-toggle:hover{border-color:var(--lime);background:#8cf12f12;color:var(--lime)}
+.theme-toggle-icon{display:block;transform:translateY(-1px)}
+@media(max-width:760px){
+ .nav-links{gap:18px}
+ .availability-indicator{font-size:9px}
+ .theme-toggle{width:40px;height:40px;flex-basis:40px}
+}
+
+/* Light theme: coordinated neutral surfaces while retaining the lime accent */
+:root[data-theme="light"]{
+ --bg:#f5f7f4;
+ --panel:#ffffff;
+ --text:#17201b;
+ --muted:#64716a;
+ --line:#dce4dc;
+ --lime:#5b9f22;
+ --lime-soft:#79bd3d;
+ color-scheme:light;
+}
+:root[data-theme="light"] body{background:var(--bg);color:var(--text)}
+:root[data-theme="light"] .site-header{border-bottom-color:var(--line)}
+:root[data-theme="light"] .nav-links>a:not(.nav-cta){color:#3f4b43}
+:root[data-theme="light"] .nav-links>a:hover{color:var(--lime)}
+:root[data-theme="light"] .menu-toggle{color:var(--text)}
+:root[data-theme="light"] .nav-cta{background:var(--lime);color:#fff}
+:root[data-theme="light"] .availability-indicator{color:#526057}
+:root[data-theme="light"] .theme-toggle{color:var(--text);border-color:var(--line)}
+:root[data-theme="light"] .hero .intro,
+:root[data-theme="light"] .section-intro,
+:root[data-theme="light"] .hero-tags span,
+:root[data-theme="light"] .about-bio{color:#536159}
+:root[data-theme="light"] .hero-tags span{border-color:var(--line)}
+:root[data-theme="light"] .portrait-caption{background:#ffffffed;border-color:#dce4dc;color:#17201b}
+:root[data-theme="light"] .service-card,
+:root[data-theme="light"] .platform-card,
+:root[data-theme="light"] .testimonial-card,
+:root[data-theme="light"] .proof-result,
+:root[data-theme="light"] .contact-link,
+:root[data-theme="light"] .project-card{background:#fff;border-color:var(--line);color:var(--text);box-shadow:0 8px 24px #17201b0a}
+:root[data-theme="light"] .service-card.featured{background:linear-gradient(145deg,#f1f8e9,#fff);border-color:#a8cc8d}
+:root[data-theme="light"] .service-card>p:last-of-type,
+:root[data-theme="light"] .platform-card p,
+:root[data-theme="light"] .proof-result p,
+:root[data-theme="light"] .testimonial-card blockquote,
+:root[data-theme="light"] .testimonial-author small,
+:root[data-theme="light"] .contact-link>span,
+:root[data-theme="light"] .contact-link i{color:#64716a}
+:root[data-theme="light"] .card-kicker{color:#68766d}
+:root[data-theme="light"] .testimonial-card:nth-child(2){background:#f0f6eb;border-color:#c9ddbb}
+:root[data-theme="light"] .testimonial-card .testimonial-author{border-top-color:var(--line)}
+:root[data-theme="light"] .testimonial-card .testimonial-mark{border-color:#a9c895;color:#4e8e21}
+:root[data-theme="light"] .client-work .client-service-tab{background:#fff;color:#26332a;border-color:var(--line)}
+:root[data-theme="light"] .client-work .client-service-tab.is-active{background:var(--lime);color:#fff;border-color:var(--lime)}
+:root[data-theme="light"] .client-work .client-service-tab:hover{border-color:var(--lime);color:#4d8d1e}
+:root[data-theme="light"] .client-work .client-service-tab.is-active:hover{color:#fff}
+:root[data-theme="light"] .client-work .client-business{background:#fff;border-color:var(--line);color:var(--text);box-shadow:0 8px 24px #17201b0a}
+:root[data-theme="light"] .client-work .client-business h3{color:#17201b}
+:root[data-theme="light"] .client-work .client-business p{color:#64716a}
+:root[data-theme="light"] .client-work .client-business span{color:#4d8d1e}
+:root[data-theme="light"] .client-work .client-card-icon{background:#edf5e8;color:#4d8d1e}
+:root[data-theme="light"] .client-work .client-work-heading>p:last-child{color:#64716a}
+:root[data-theme="light"] .contact-section,
+:root[data-theme="light"] .contact-platforms,
+:root[data-theme="light"] .testimonials,
+:root[data-theme="light"] .about-editorial,
+:root[data-theme="light"] .client-work,
+:root[data-theme="light"] .proof-section{background:var(--bg);color:var(--text)}
+:root[data-theme="light"] .contact-topline p,
+:root[data-theme="light"] .contact-topline span,
+:root[data-theme="light"] .contact-copy p,
+:root[data-theme="light"] .testimonials-heading .testimonials-intro,
+:root[data-theme="light"] .testimonials-controls .hero-index,
+:root[data-theme="light"] .about-kicker,
+:root[data-theme="light"] .about-footer{color:#64716a}
+:root[data-theme="light"] .contact-links{border-color:var(--line)}
+:root[data-theme="light"] .contact-link{border-color:var(--line)}
+:root[data-theme="light"] .contact-link strong{color:var(--text)}
+:root[data-theme="light"] .contact-link:hover{background:#edf5e8}
+:root[data-theme="light"] .contact-cta{background:var(--lime);color:#fff}
+:root[data-theme="light"] .contact-cta:hover{background:#4c8d1d}
+:root[data-theme="light"] .portfolio-footer{background:#eaf0e9;color:var(--text);border-top-color:var(--line)}
+:root[data-theme="light"] .footer-brand-block>p,
+:root[data-theme="light"] .footer-bottom span,
+:root[data-theme="light"] .footer-bottom a,
+:root[data-theme="light"] .footer-contact-group>p,
+:root[data-theme="light"] .footer-nav-group h3{color:#64716a}
+:root[data-theme="light"] .footer-nav-group>a,
+:root[data-theme="light"] .footer-email-link{color:#26332a}
+:root[data-theme="light"] .footer-logo-link{background:#fff;border-color:var(--line)}
+:root[data-theme="light"] .proof-heading>p:last-child,
+:root[data-theme="light"] .proof-case-heading p,
+:root[data-theme="light"] .proof-caption{color:#64716a}
+:root[data-theme="light"] .proof-labels span{background:#fff;border-color:var(--line)}
+:root[data-theme="light"] .proof-case-heading h3,
+:root[data-theme="light"] .proof-heading h2,
+:root[data-theme="light"] .proof-heading h2 em{color:var(--text)}
+:root[data-theme="light"] .proof-result{border-color:var(--line)}
+:root[data-theme="light"] .about-alias{color:#4c762e;border-color:#a9c895}
+:root[data-theme="light"] .about-portraits .about-orbit{opacity:.24}
+:root[data-theme="light"] .about-footer{border-top-color:var(--line)}
+:root[data-theme="light"] .testimonials-heading,
+:root[data-theme="light"] .testimonials-controls{border-color:var(--line)}
+:root[data-theme="light"] .testimonial-timeline span{background:#d5ded5}
+:root[data-theme="light"] .testimonial-timeline span.is-current{background:var(--lime)}
+:root[data-theme="light"] .testimonial-card blockquote{color:#354239}
+:root[data-theme="light"] .testimonial-card .testimonial-author strong{color:#17201b}
+:root[data-theme="light"] .testimonial-card .testimonial-author{border-top-color:var(--line)}
+:root[data-theme="light"] .testimonial-card .testimonial-mark{background:#f1f7ed}
+:root[data-theme="light"] .contact-carousel-arrows button,
+:root[data-theme="light"] .testimonials-arrows .testimonial-nav{color:var(--text);border-color:var(--line)}
+:root[data-theme="light"] .contact-carousel-arrows button:hover,
+:root[data-theme="light"] .testimonials-arrows .testimonial-nav:hover{background:var(--lime);border-color:var(--lime);color:#fff}
+:root[data-theme="light"] .skip-link{background:var(--lime);color:#fff}
+:root[data-theme="light"] .map-comparison{box-shadow:0 18px 36px #17201b12}
+@media(max-width:760px){
+ :root[data-theme="light"] .nav-links{background:#fff;border-bottom-color:var(--line);box-shadow:0 14px 25px #17201b0c}
+}
